@@ -177,8 +177,8 @@ namespace Reloaded.Assembler
         /// </summary>
         private string GetFasmDLLPath()
         {
-            const string FASM86DLL = "FASM.dll";
-            const string FASM64DLL = "FASMX64.dll";
+            const string FASM86DLL = "fasm.dll";
+            const string FASM64DLL = "fasm_x64.dll";
 
             // Check current directory.
             if (IntPtr.Size == 4 && File.Exists(FASM86DLL))

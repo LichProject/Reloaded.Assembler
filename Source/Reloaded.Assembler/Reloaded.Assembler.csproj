@@ -1,9 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>
-      netstandard2.0;
-    </TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <Platforms>AnyCPU;x86;x64</Platforms>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -34,18 +32,15 @@
       <PackagePath></PackagePath>
     </None>
     <None Include="Reloaded.Assembler.targets" Pack="true" PackagePath="build" />
-    <None Include="FASM-LICENSE.TXT" Pack="true" PackagePath="build">
+    <None Include="fasm.dll" Pack="true" PackagePath="build">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="FASM.DLL" Pack="true" PackagePath="build">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="FASMX64.DLL" Pack="true" PackagePath="build">
+    <None Include="fasm_x64.dll" Pack="true" PackagePath="build">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Reloaded.Memory.Buffers" Version="1.3.5" />
+    <ProjectReference Include="..\..\..\Reloaded.Memory.Buffers\Source\Reloaded.Memory.Buffers\Reloaded.Memory.Buffers.csproj" />
   </ItemGroup>
 </Project>
